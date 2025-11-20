@@ -656,3 +656,5 @@ addListeners(outerContainer, ['touchend', 'mouseup', 'mouseleave'], endPageDrag)
 
 // Exibe a primeira página
 renderPage(false);
+
+// Testing local backup
