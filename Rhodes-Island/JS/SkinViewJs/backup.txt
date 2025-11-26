@@ -4,6 +4,8 @@
   const skinsSlider = $('.skinsSlider');
   const skinsTrack = skinsSlider.querySelector('.skinsTrack');
 
+const isPortrait = () => { return window.matchMedia("(orientation: portrait)").matches; }
+
   let activeSlide = null;
   let isTransitioning = false;
 
@@ -323,15 +325,29 @@ function updateStyles() {
 
   function setAnimationState(state) { skinsTrack.style.animationPlayState = state; }
 
+  
+const isTouchDevice =
+  'ontouchstart' in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0;
+
+if (!isTouchDevice) {
   skinsSlider.addEventListener('mouseenter', () => setAnimationState('paused'));
   skinsSlider.addEventListener('mouseleave', () => setAnimationState('running'));
+}
+
+  let isTouching = false;
+
+  generateSlides();
+  updateSlider();
+
+  // Adiciona os listeners antes de iniciar a animação
   skinsSlider.addEventListener('touchstart', () => setAnimationState('paused'));
   skinsSlider.addEventListener('touchend', () => setAnimationState('running'));
   skinsSlider.addEventListener('touchcancel', () => setAnimationState('running'));
 
-  generateSlides();
-
-  updateSlider();
+  // Inicia a animação somente após os listeners estarem registrados
+  requestAnimationFrame(() => { skinsTrack.style.animationPlayState = 'running'; });
 
   window.addEventListener('resize', () => {
     updateSlider();

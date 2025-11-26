@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+// WARNING
+// CTRL + ', http-server command to initiate the local server
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +37,9 @@
 
     </style>
     
-    <link rel="stylesheet" href="../CSS/Home/homepage.css">
-    <link rel="stylesheet" href="../CSS/Selector/seletor.css">
-    <link rel="stylesheet" href="../CSS/SkinView/viewskins.css">
+<link rel="stylesheet" href="./CSS/Home/homepage.css">
+<link rel="stylesheet" href="./CSS/Selector/seletor.css">
+<link rel="stylesheet" href="./CSS/SkinView/viewskins.css">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -45,7 +48,7 @@
 
 <body>
 
-<section class = "entrance"><img src = "..\Imgs\initial_logo.png"></section>
+<section class = "entrance"><img src = "./Imgs/initial_logo.webp" fetchpriority = "high"></section>
 
 <svg style="display: flex; position: absolute; transform: translateX(-1000%);" aria-hidden="true">
   <defs>
@@ -72,10 +75,10 @@
         <h1 class = "menu-title">PRTS</h1>
         <div class = "menu-icon"></div>
     </div>
-        <img src = "https://static.wikia.nocookie.net/mrfz/images/3/30/Arknights_logo.png/revision/latest?cb=20220321013018" loading = "lazy">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/5/50/Arknights_English_Release_Logo.svg" loading = "lazy" width= "100%" height="auto">
 </header>
     <section class = "menu-section">
-        <img src = "https://static.wikia.nocookie.net/mrfz/images/3/30/Arknights_logo.png/revision/latest?cb=20220321013018" loading = "lazy">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/5/50/Arknights_English_Release_Logo.svg" loading = "lazy">
         <p>Home</p>
         <p>Notices</p>
         <p>Upcoming Skins</p>
@@ -117,17 +120,16 @@
         </div>
         <p class="operator-selector-name" id="codename_Hakuhou">Hakuhou</p>
       </div>
-
     </div>
   </div>
     <section class = "char-overall">
 <div class="character-selector">
     <button class="skills-button" id= "skills-btn" aria-label="Selecione Skills">
-        <img src="../Imgs/Skills ( Reed The FlameShadow).png" loading = "lazy" alt="Imagem representando Skills">
+        <img src="./Imgs/Skills ( Reed The FlameShadow).webp" loading = "lazy" alt="Imagem representando Skills">
         <h3>Skills</h3>
     </button>
     <button class="characters-button" id= "characters-btn"  aria-label="Selecione Characters">
-        <img src="../Imgs/Characters ( Eunectes ).png" loading= "lazy" alt="Imagem representando Characters">
+        <img src="./Imgs/Characters ( Eunectes ).webp" loading= "lazy" alt="Imagem representando Characters">
         <h3>Operators</h3>
     </button>
 </div>
@@ -217,12 +219,9 @@
    </article>
 
 </div>
-<script type="text/javascript" src="../JS/HomeJs/home.js"></script>
-<script type = "text/javascript" src= "../JS/FutureJSONdata/operatorsData.js"></script>
-<script type = "text/javascript" src= "../JS/FutureJSONdata/skillsData.js"></script>
-<script type = "text/javascript" src = "../JS/FutureJSONdata/operatorSkins.js"></script>
-<script type = "text/javascript" src = "../JS/SelectorJs/selectorskin.js"></script>
-<script type = "text/javascript" src = "../JS/SkinViewJs/skinsOverview.js"></script>
+<script type="text/javascript" src="./JS/HomeJs/home.js"></script>
+<script type = "module" src = "./JS/SelectorJs/selectorskin.js"></script>
+<script type = "text/javascript" src = "./JS/SkinViewJs/skinsOverview.js"></script>
 <script>
 // Bloqueia scroll inicial
 document.body.style.overflow = 'hidden';

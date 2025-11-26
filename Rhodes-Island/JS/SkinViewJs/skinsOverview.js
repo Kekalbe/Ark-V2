@@ -1,0 +1,383 @@
+  const operatorSkinContainer = $('.OperatorSkin-Name');
+  const skinImageElement = $('.operatorSkinIMG');
+  const operatorNameElement = $('.actualOperator-name');
+  const skinsSlider = $('.skinsSlider');
+  const skinsTrack = skinsSlider.querySelector('.skinsTrack');
+
+const isPortrait = () => { return window.matchMedia("(orientation: portrait)").matches; }
+
+  let activeSlide = null;
+  let isTransitioning = false;
+  let isTouching = false;
+
+async function loadOperatorSkins() {
+  try {
+    const cacheBuster = new Date().getTime();  // Gera um valor único
+    const response = await fetch('./JS/FutureJSONdata/operatorSkins.json');
+
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar JSON: ${response.status}`);
+    }
+
+    const jsonData = await response.json();
+
+    // Salva globalmente
+    window.operatorSkins = jsonData;
+
+    console.log("JSON carregado com sucesso:", window.operatorSkins);
+
+    // Agora podemos gerar os slides
+    generateSlides();
+    updateSlider();
+
+  } catch (error) {
+    console.error("Falha ao carregar operadores/skins:", error);
+  }
+}
+
+  function filterSlides(operators) {
+    const filters = {
+      price: '',        // Filtro de preço
+      name: '',         // Filtro de nome (será usado para filtrar o 'id' dos operadores)
+    };
+
+    // Verifica se todos os filtros estão com valor nulo, undefined ou string vazia
+    const areFiltersEmpty = Object.values(filters).every(value => value === null || value === undefined || value === '');
+    const defaultReturnSkins = operators.flatMap(op => op.totalSkins || []);
+
+    // Se todos os filtros estiverem vazios, retorna o array completo de skins // Retorna todas as skins
+    if (areFiltersEmpty) { return defaultReturnSkins; }
+
+    // Cria array plano de todas as skins a partir do operador que corresponde ao filtro de nome
+    const allSkins = operators
+      .filter(op => filters.name === '' || op.id.toLowerCase().includes(filters.name.toLowerCase()))
+ // Filtra operador pelo 'id' correspondente ao 'name' do filtro
+      .flatMap(op => op.totalSkins || []);   // Extrai as skins do operador filtrado
+
+    // Caso não haja skins correspondentes, retorna um array vazio
+    if (allSkins.length === 0) { return []; }
+
+    let filteredSkins = allSkins;
+
+      // Filtro de preço (com flexibilidade para um intervalo de preço)
+  if (filters.price !== null && filters.price !== undefined && filters.price !== '') {
+    const targetPrice = parseFloat(filters.price);
+    filteredSkins = filteredSkins.filter(item => 
+      Math.abs(Number(item.price) - targetPrice) < 0.01  // Tolerância de 0.01, ajustável
+    );
+  }
+    // Retorna as skins filtradas
+    return filteredSkins.length > 0 ? filteredSkins : allSkins;
+  }
+
+function generateSlides() {
+  skinsTrack.innerHTML = '';  // Limpa os slides existentes
+
+  const filteredSkins = filterSlides(window.operatorSkins); // passa todos os operadores
+  filteredSkins.forEach(skin => {
+    // você precisa encontrar qual operador é dono dessa skin
+    const operator = window.operatorSkins.find(op => op.totalSkins.includes(skin));
+    const slide = createOperatorSlide(operator, skin);
+    skinsTrack.appendChild(slide);
+  });
+  // Obtém os slides originais
+  const originalSlides = Array.from(skinsTrack.children);
+
+// Usando operador ternário para definir a lógica de justificação e clonagem
+originalSlides.length > 1 
+  ? cloneAndAppendSlides(originalSlides)  // Clona os slides se houver mais de 1
+  : (skinsTrack.style.justifyContent = 'center');  // Caso haja apenas 1 slide, aplica o justify-center
+}
+
+function createOperatorSlide(operator, skin) {
+    const operatorSlide = document.createElement('div');
+    operatorSlide.classList.add('SkinsOperator');
+    operatorSlide.id = `${operator.id}-${skin.name}`;
+
+    const layoutContainer = document.createElement('div');
+    layoutContainer.classList.add('layerConteiner');
+
+    const skinLayout = document.createElement('div');
+    skinLayout.classList.add('layoutConteinerSkin');
+
+    const skinImg = document.createElement('img');
+    skinImg.classList.add('operatorSliderSkinIMG');
+    skinImg.src = skin.onSliderUrl;
+    skinImg.style.transform = skin.onSliderIMGTransform || 'none';
+    skinLayout.appendChild(skinImg);
+
+    const operatorName = document.createElement('h2');
+    operatorName.classList.add('OperatorName');
+    operatorName.textContent = operator.id;
+    skinLayout.appendChild(operatorName);
+
+    layoutContainer.appendChild(skinLayout);
+
+    const skinNameSection = document.createElement('div');
+    skinNameSection.classList.add('operatorSliderSkin-Name');
+
+    const trackText = document.createElement('div');
+    trackText.classList.add('text-track');
+
+    for (let i = 0; i < 4; i++) {
+      const skinNameElement = document.createElement('h3');
+      skinNameElement.textContent = `// ${skin.name}`;
+      trackText.appendChild(skinNameElement);
+    }
+
+    skinNameSection.appendChild(trackText);
+
+    const skinPrice = document.createElement('div');
+    skinPrice.classList.add('skinPrice');
+
+    const priceIcon = document.createElement('img');
+    priceIcon.src = 'https://arknights.wiki.gg/images/thumb/Originite_Prime_icon.png/22px-Originite_Prime_icon.png?83ccc8';
+    skinPrice.appendChild(priceIcon);
+
+    const priceSpan = document.createElement('span');
+    priceSpan.id = `price${operator.id}`;
+    priceSpan.textContent = skin.price;
+    skinPrice.appendChild(priceSpan);
+
+    operatorSlide.appendChild(layoutContainer);
+    operatorSlide.appendChild(skinNameSection);
+    operatorSlide.appendChild(skinPrice);
+
+    setSlideDatasets(operatorSlide, operator, skin);
+    operatorSlide.skinData = skin;
+
+    return operatorSlide;
+}
+
+function setSlideDatasets(slide, operator, skin) {
+  Object.assign(slide.dataset, {
+    operatorName: operator.id,
+    skinName: skin.name,
+    skinImage: skin.principalURL,
+    principalURL: skin.principalURL,
+    onSliderIMGTransform: skin.onSliderIMGTransform || 'none',
+    principalTransform: skin.principalTransform || 'none',
+    nameTransform: skin.nameTransform || '',
+    nameSize: skin.nameSize || '16px'
+  });
+}
+
+  function cloneAndAppendSlides(slides) {
+
+    const cloneOrSlide = (valueToChange) => {
+        if (isTransitioning) return;
+        activeSlide = valueToChange;
+        handleClick(valueToChange);
+    }
+    
+    slides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      clone.classList.add('cloned');
+      clone.skinData = slide.skinData;
+
+      clone.addEventListener('click', () => { cloneOrSlide(clone); });
+
+      skinsTrack.appendChild(clone);
+
+    slide.addEventListener('click', () => { cloneOrSlide(slide); });
+    });
+  }
+
+function updateSlideInfo(operatorSlide) {
+  // --- Atualiza nome e skin ---
+  let skinSpan = operatorNameElement.querySelector('.actualSkin-name');
+  if (!skinSpan) {
+    skinSpan = document.createElement('span');
+    skinSpan.classList.add('actualSkin-name');
+    operatorNameElement.appendChild(document.createElement('br'));
+    operatorNameElement.appendChild(skinSpan);
+  }
+
+  const firstIsText =
+    operatorNameElement.firstChild &&
+    operatorNameElement.firstChild.nodeType === Node.TEXT_NODE;
+
+  if (firstIsText) {
+    operatorNameElement.firstChild.nodeValue = operatorSlide.dataset.operatorName;
+  } else {
+    operatorNameElement.insertBefore(
+      document.createTextNode(operatorSlide.dataset.operatorName),
+      skinSpan
+    );
+  }
+
+  skinSpan.textContent = operatorSlide.dataset.skinName;
+
+  // --- Aplica estilos ---
+  operatorSkinContainer.style.transform = isPortrait()
+    ? 'none'
+    : (operatorSlide.dataset.nameTransform || 'none');
+
+  operatorNameElement.style.fontSize = operatorSlide.dataset.nameSize || '16px';
+
+  // Imagem (tamanho / transform)
+  applyTransformAndSize(operatorSlide.skinData, isPortrait(), skinImageElement);
+
+  // Troca a imagem (onload será tratado no fadeInOut)
+  skinImageElement.src = operatorSlide.dataset.principalURL;
+}
+
+function fadeInOut(operatorSlide) {
+  if (isTransitioning) return;
+  isTransitioning = true;
+
+  const elements = [operatorSkinContainer, operatorNameElement, skinImageElement];
+
+  elements.forEach(el => el.style.transition = 'opacity 0.5s ease');
+
+  const fadeOut = (el) => new Promise(resolve => {
+    const onFadeOut = (e) => {
+      if (e.propertyName !== 'opacity') return;
+      el.removeEventListener('transitionend', onFadeOut);
+      resolve();
+    };
+    el.addEventListener('transitionend', onFadeOut);
+    el.style.opacity = 0;
+  });
+
+  const fadeIn = (el) => new Promise(resolve => {
+    const onFadeIn = (e) => {
+      if (e.propertyName !== 'opacity') return;
+      el.removeEventListener('transitionend', onFadeIn);
+      resolve();
+    };
+    el.addEventListener('transitionend', onFadeIn);
+    el.style.opacity = 1;
+  });
+
+  // Fade out de todos os elementos
+  Promise.all(elements.map(fadeOut)).then(() => {
+
+    // 🔥 --- AQUI entra a função separada ---
+    updateSlideInfo(operatorSlide);
+
+    // fadeIn só começa quando a nova imagem carregar
+    skinImageElement.onload = () => {
+      Promise.all(elements.map(fadeIn)).then(() => {
+        isTransitioning = false;
+      });
+    };
+  });
+}
+
+function handleClick(operatorSlide) {
+  if (isTransitioning) return;  // Impede múltiplas transições simultâneas
+  activeSlide = operatorSlide;
+  
+  // Chama a função fadeOutIn (ou fadeInOut) para tratar a transição e troca de informações
+  fadeInOut(operatorSlide);
+}
+
+  function createKeyframes(direction, distance) {
+    const oldStyle = document.getElementById('dynamic-slider-style');
+    if (oldStyle) oldStyle.remove();
+
+    const style = document.createElement('style');
+    style.id = 'dynamic-slider-style';
+    style.type = 'text/css';
+
+    const axis = direction === 'vertical' ? 'Y' : 'X';
+    style.innerHTML = `
+      @keyframes scrollElevator {
+        0% { transform: translate${axis}(0); }
+        100% { transform: translate${axis}(-${distance}px); }
+      }
+    `;
+
+    document.head.appendChild(style);
+  }
+
+function updateSlider() {
+  const direction = isPortrait() ? 'horizontal' : 'vertical';
+
+  skinsTrack.style.flexDirection = direction === 'horizontal' ? 'row' : 'column';
+
+  const slides = Array.from(skinsTrack.children); // Pega os slides
+  const originalCount = slides.length / 2; // Duplicação dos slides para o efeito de loop infinito
+
+  // Verifica o número de slides, se tiver apenas 1, desativa o scrollElevator
+  if (originalCount <= 1) {
+    // Desativa a animação
+    skinsTrack.style.animation = 'none';
+    return; // Retorna sem aplicar a animação
+  }
+
+  const gap = parseFloat(getComputedStyle(skinsTrack).gap) || 0;
+  const sampleSlide = slides[0];
+  const size = direction === 'horizontal' ? sampleSlide.offsetWidth : sampleSlide.offsetHeight;
+
+  const totalDistance = originalCount * (size + gap);
+  createKeyframes(direction, totalDistance);
+
+  skinsTrack.style.animation = `scrollElevator 30s linear infinite`;
+  skinsTrack.style.animationPlayState = 'running';
+}
+
+function applyTransformAndSize(skinData, isPortrait, skinImageElement) {
+  
+  const transform = isPortrait 
+    ? skinData.responsiveTransform.mobilePrincipalTransform 
+    : skinData.responsiveTransform.principalTransform;
+
+  const width = isPortrait 
+    ? skinData.responsiveWidth.mobileWidthImgPrincipal 
+    : skinData.responsiveWidth.widthImgPrincipal;
+
+  skinImageElement.style.transform = transform || 'none';
+  skinImageElement.style.width = width || '';
+}
+
+function updateStyles() {
+  if (!activeSlide || isTransitioning || !activeSlide.skinData) return;
+  if (!operatorSkinContainer || !skinImageElement) return;
+
+  // Aplica a transformação de nome
+  operatorSkinContainer.style.transform = isPortrait()
+    ? 'none'
+    : (activeSlide.skinData.nameTransform || 'none');
+
+  // Aplica a transformação e largura da imagem
+  applyTransformAndSize(activeSlide.skinData, isPortrait(), skinImageElement);
+
+  const slideImg = activeSlide.querySelector('.operatorSliderSkinIMG');
+
+  if (slideImg) slideImg.style.transform = activeSlide.dataset.onSliderIMGTransform || 'none';
+}
+
+  function setAnimationState(state) { skinsTrack.style.animationPlayState = state; }
+
+  
+const isTouchDevice =
+  'ontouchstart' in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0;
+
+if (!isTouchDevice) {
+  skinsSlider.addEventListener('mouseenter', () => setAnimationState('paused'));
+  skinsSlider.addEventListener('mouseleave', () => setAnimationState('running'));
+}
+
+loadOperatorSkins();
+
+  // Adiciona os listeners antes de iniciar a animação
+  skinsSlider.addEventListener('touchstart', () => setAnimationState('paused'));
+  skinsSlider.addEventListener('touchend', () => setAnimationState('running'));
+  skinsSlider.addEventListener('touchcancel', () => setAnimationState('running'));
+
+  // Inicia a animação somente após os listeners estarem registrados
+  requestAnimationFrame(() => { skinsTrack.style.animationPlayState = 'running'; });
+
+  window.addEventListener('resize', () => {
+    updateSlider();
+    updateStyles();
+  });
+
+  window.addEventListener('orientationchange', () => {
+    updateSlider();
+    updateStyles();
+  });

@@ -1,3 +1,20 @@
+// Variáveis de controle
+let currentIndex = 0;
+let animating = false;
+let isResizing = false;
+
+let currentOperatorId = null; // operador atualmente selecionado (só setado ao clicar)
+let currentOperator = null; // Variável global para armazenar o operador atual
+
+let fadeInCallback = null;
+
+// --- Implementa drag e touch para navegação ---
+let pageDragIsDragging = false;
+let pageDragStartX = 0;
+let pageDragDiffX = 0;
+
+const isPortrait = () => { return window.matchMedia("(orientation: portrait)").matches; }
+
 const skill_btn = $('#skills-btn');
 const char_btn = $('#characters-btn');
 const charInfo = $('.character-information');
@@ -9,6 +26,61 @@ const backgroundImage = $('.BG-Operator-Image');
 const exitList_btn = $('.exit-button p');
 const exitSkill_btn = $('.skill-exit-button');
 const nameEl = $('.Operator-title');
+const outerContainer = $('.outer-block');
+
+function createOperatorList() {
+    const outerContainer = $('.outer-block');
+    outerContainer.innerHTML = ''; // limpa
+
+    // garante que o JSON existe
+    if (!window.operatorsData) {
+        console.error("operatorsData ainda não carregado!");
+        return;
+    }
+
+    window.operatorsData.forEach(op => {
+        const operatorCard = createOperatorCard(op);
+        outerContainer.appendChild(operatorCard);
+    });
+
+    // atualiza containers (SEM redeclarar!)
+    charContainers.length = 0;
+    charContainers.push(...Array.from($$('.operator-conteiner')));
+}
+
+// Função para carregar os dados de operadores
+async function loadOperatorsData() {
+    const resp = await fetch('./JS/FutureJSONdata/operatorsData.json');
+    if (!resp.ok) throw new Error("Erro JSON de operadores: " + resp.status);
+    return resp.json();
+}
+
+// Função para carregar os dados de habilidades
+async function loadSkillsData() {
+    const resp = await fetch('./JS/FutureJSONdata/skillsData.json');
+    if (!resp.ok) throw new Error("Erro JSON de habilidades: " + resp.status);
+    return resp.json();
+}
+
+// Função para inicializar tudo — agora carrega os dois JSONs
+async function init() {
+    try {
+        // Carregar operadores e habilidades
+        window.operatorsData = await loadOperatorsData();
+        window.skillsData = await loadSkillsData();
+
+        // Chamar as funções que dependem dos dados carregados
+        createOperatorList();  // Cria a lista de operadores
+        renderPage(false);     // Renderiza a página de operadores
+        updateResizeClass();   // Ajusta as classes de redimensionamento
+        updateOperatorTransformByState();  // Aplica transformações no operador
+    } catch (error) {
+        console.error("Erro ao carregar os dados:", error);
+    }
+}
+
+// Chama a função init quando o DOM estiver carregado
+document.addEventListener("DOMContentLoaded", init);
 
 // Partes reusáveis
 const isCharListActive = () => charList.classList.contains('active');
@@ -140,15 +212,16 @@ function updateMaskImage() {
 
 function startVerticalDrag(y) {
   verticalIsDragging = true;
-  startY = y - charSkills.offsetTop;
+  startY = y; // salva a posição inicial do touch/mouse
   initialScrollTop = charSkills.scrollTop;
 }
 
 function dragVerticalTo(y) {
   if (!verticalIsDragging) return;
-  const offset = y - charSkills.offsetTop;
-  const walk = (offset - startY);
-  charSkills.scrollTop = initialScrollTop - walk;
+
+  const deltaY = startY - y; // diferença do movimento
+  startY = y; // atualiza startY para o próximo frame
+  charSkills.scrollTop += deltaY; // move o scroll proporcionalmente
   updateMaskImage();
 }
 
@@ -162,9 +235,6 @@ charSkills.addEventListener('mousedown', (e) => {
 
 document.addEventListener('mouseup', () => { endVerticalDrag(); charSkills.style.cursor = 'grab'; });
 document.addEventListener('mousemove', (e) => { dragVerticalTo(e.pageY); });
-charSkills.addEventListener('touchstart', (e) => { startVerticalDrag(e.touches[0].pageY); });
-document.addEventListener('touchend', endVerticalDrag);
-document.addEventListener('touchmove', (e) => { dragVerticalTo(e.touches[0].pageY); });
 
 charSkills.style.cursor = 'grab';
 charSkills.style.overflowY = 'scroll';
@@ -206,25 +276,8 @@ function createOperatorCard(operator) {
   return container;
 }
 
-// Criação dos operadores no outer-container
-const outerContainer = $('.outer-block');
-outerContainer.innerHTML = ''; // Limpa o container antes de adicionar novos operadores
-
-window.operatorsData.forEach(op => {
-  const operatorCard = createOperatorCard(op);
-  outerContainer.appendChild(operatorCard);
-});
-
-const isPortrait = () => { return window.matchMedia("(orientation: portrait)").matches; }
-
 // === Seleciona todos os operadores após criar ===
 const charContainers = Array.from($$('.operator-conteiner'));
-
-// Variáveis de controle
-let currentIndex = 0;
-let animating = isResizing = false;
-let currentOperatorId = null; // operador atualmente selecionado (só setado ao clicar)
-let currentOperator = null; // Variável global para armazenar o operador atual
 
 // Função para limpar a string (se necessário)
 function cleanString(str) { return str ? str.trim() : ''; }
@@ -479,23 +532,19 @@ function enableClicks(items) {
   // Remove handlers antigos
   charContainers.forEach(item => item.onclick = null);
 
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      if (animating || isResizing) return; // ainda respeita flags de animação/resize
+items.forEach(item => {
+  item.addEventListener('click', (e) => {
+    if (animating || isResizing || isDraggingList) return; // ⚠️ bloqueia clique se arrastou
 
-      // Visual: remove 'active' de todos e adiciona ao clicado
-      items.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
+    const currentActive = charContainers.find(c => c.classList.contains('active-operator'));
+    if (currentActive) currentActive.classList.remove('active', 'active-operator');
 
-      // Inicia a transição com fade (bloqueando cliques durante)
-      const operatorId = item.dataset.id;
-      fadeTransitionOperatorChange(operatorId);
+    item.classList.add('active', 'active-operator');
 
-      // Marca o container clicado como "ativo"
-      charContainers.forEach(c => c.classList.remove('active-operator'));
-      item.classList.add('active-operator');
-    });
+    const operatorId = item.dataset.id;
+    fadeTransitionOperatorChange(operatorId);
   });
+});
 }
 
 function clearStyles(items) {
@@ -617,32 +666,33 @@ window.addEventListener('resize', () => {
   }, 300);
 });
 
-// --- Implementa drag e touch para navegação ---
-let pageDragIsDragging = false;
-
-let pageDragStartX = pageDragDiffX = 0;
+let isDraggingList = false;
 
 function startPageDrag(e) {
   if (animating) return;
   pageDragIsDragging = true;
   pageDragStartX = e.touches ? e.touches[0].pageX : e.pageX;
+  isDraggingList = false;
 }
 
 function movePageDrag(e) {
   if (!pageDragIsDragging) return;
   const currentX = e.touches ? e.touches[0].pageX : e.pageX;
   pageDragDiffX = currentX - pageDragStartX;
+
+  if (Math.abs(pageDragDiffX) > 10) {
+    isDraggingList = true; // detecta que houve arraste
+  }
 }
 
 function endPageDrag() {
   if (!pageDragIsDragging) return;
-
   pageDragIsDragging = false;
+
   const threshold = 50;
-
   if (pageDragDiffX > threshold) { prevPage(); } 
-
   else if (pageDragDiffX < -threshold) { nextPage(); }
+
   pageDragDiffX = 0;
 }
 

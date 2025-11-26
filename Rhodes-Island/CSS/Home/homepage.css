@@ -29,7 +29,7 @@ body::-webkit-scrollbar { display: none; }
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease-in;
     z-index: -1;
-    background-image: url("https://arknights.wiki.gg/images/EN_Absolved_Will_Be_the_Seekers_banner.png?34ac8f=&format=original");
+    background-image: url("../Episode14AbsolvedWillBeTheSeekers.webp");
     background-position: 75% 0%;
     background-repeat: no-repeat;
     background-size: cover;

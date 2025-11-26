@@ -332,6 +332,7 @@
 
 .operatorSkinIMG, .OperatorSkin-Name {
   transition: opacity 0.5s ease-in-out;
+   user-select: none;
 }
 
 
@@ -351,7 +352,7 @@
 
     .operatorSkinIMG { width: clamp(30vw + 60vh, 30vw + 120vh, 350vw); }
 
-    #principalImg-Operator { transform: translate(-50%, -50%); }
+    #principalImg-Operator { transform: translate(-50%, -50%); pointer-events: none; }
 
     .OperatorSkin-Name {
         width: clamp(12vw + 30vh, 10vw + 35vh, 55vw);
@@ -399,6 +400,7 @@
 
     .operatorSliderSkinIMG {
         width: clamp(15vw + 64vh, 15vw + 65vh, 180vw);
+        pointer-events: none;
     }
 
     .operatorSliderSkin-Name {
