@@ -1,0 +1,338 @@
+[
+  {
+    "id": "Ling",
+    "skill_1": {
+      "titleSkill": "Sips of Wine",
+      "descSkill": "Passive: Summons may be deployed on melee tiles.<br>Active: Ling and her summons gain +20% ATK and +20 ASPD. The summons deal Arts damage<br>Immediately gain 1 summon when the skill is activated",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@743ad9aa94ce284dcb7ea94a9dc3f3923cd7a28e/Rhodes-Island/DataOperatorImages/OperatorSkill/Ling/64px-Skill-Ling1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Amidst Pleasant Melodies",
+      "descSkill": "Passive: Summons may be deployed on ranged tiles and deals Arts damage<br>Active: Ling and her summons deal 250% ATK as Arts damage to 2 enemies within Attack Range and Bind them for 1.5 seconds.<br>After the skill ends, retrieve all summons with less than 50% HP; Can store 1 charge(s)",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@743ad9aa94ce284dcb7ea94a9dc3f3923cd7a28e/Rhodes-Island/DataOperatorImages/OperatorSkill/Ling/64px-Skill-Ling2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "To Remain Oneself",
+      "descSkill": "Passive: Summons may be deployed on melee tiles. If there are other summons within their attack range, combines them into a Higher form.<br>Active: Ling and her summons gain +40% ATK and +40% DEF. Each summon deals 20% of Ling's ATK as Arts damage to enemies in the four adjacent tiles every 0.5 second.<br>After the skill ends, gain 1 summon",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@743ad9aa94ce284dcb7ea94a9dc3f3923cd7a28e/Rhodes-Island/DataOperatorImages/OperatorSkill/Ling/64px-Skill-Ling3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Caster",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@539c1fe1c3569d1eee3fedce1141a3ecf5a5ff64/Rhodes-Island/ClassImages/Caster.webp"
+      },
+      "branch": {
+        "name": "Summoner",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Summoner_Supporter.webp"
+      }
+    }
+  },
+  {
+    "id": "Nian",
+    "skill_1": {
+      "titleSkill": "Tin Burning",
+      "descSkill": "DEF +25%, ATK +10%, and normal attacks now deal Arts damage",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Nian/64px-Skill-Nian1.webp"
+    },
+     "skill_2": {
+      "titleSkill": "Copper Seal",
+      "descSkill": "Stops attacking; DEF +60%, Block +1, upon receiving an enemy attack, deals Arts damage to the attacker equal to 50% of Nian's ATK and silences them for 3 seconds",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Nian/64px-Skill-Nian2.webp"
+    },
+      "skill_3": {
+      "titleSkill": "Iron Defense",
+      "descSkill": "ATK +55%; Nearby allied Operators gain DEF +30%, Block +1 and status resistance",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Nian/64px-Skill-Nian3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Defender",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Defender.webp"
+      },
+      "branch": {
+        "name": "Protector",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Protector_Defender.webp"
+      }
+    }
+  },
+  {
+    "id": "Dusk",
+    "skill_1": {
+      "titleSkill": "Transcendental Stroke",
+      "descSkill": "The next attack has increased splash area and deals 150% ATK as Arts damage<br>Can store 1 charges",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Dusk/64px-Skill-Dusk1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Flowing Ink",
+      "descSkill": "Range expands, ATK +20%, ASPD +20 and attacks all enemies within range. Increase Arts damage dealt to enemies with less than 50% HP to 115%",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Dusk/64px-Skill-Dusk2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Image Over Form",
+      "descSkill": "Attack Interval increases and prioritize attacking unblocked enemies. Range and splash area expand, ATK +40% and every attack summons/refreshes a \"Freeling\" (lasts for 25 seconds) at the target's location (only on deployable ground tiles)",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Dusk/64px-Skill-Dusk3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Caster",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@539c1fe1c3569d1eee3fedce1141a3ecf5a5ff64/Rhodes-Island/ClassImages/Caster.webp"
+      },
+      "branch": {
+        "name": "Splash",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Splash_Caster.webp"
+      }
+    }
+  },
+  {
+    "id": "Shu",
+    "skill_1": {
+      "titleSkill": "Verdant Wisdom",
+      "descSkill": "The next attack restores HP equal to 110% ATK to a nearby friendly unit with less than 50% HP<br>Can store 1 charge",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Shu/64px-Skill-Shu1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Bountiful Harvest",
+      "descSkill": "Stops attacking to focus on healing up to 2 allied units within range; ATK +30%; Block +1; Talent 1 effect increases to 1.2x<br>Heals will use a special attack interval",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Shu/64px-Skill-Shu2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Samsara",
+      "descSkill": "Healing range expands, attacks now also heal allied Operators; ATK +10%. If there are ground enemies on sowed tiles, all allied units within skill range gains +10% ATK and +10 ASPD; When an enemy passes through a sowed tile, it gains the following effect: Teleport back to this location after moving more than 4 tiles away",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@6a3a91c7c73642895c820d8e64f6ee44fb4b1338/Rhodes-Island/DataOperatorImages/OperatorSkill/Shu/64px-Skill-Shu3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Defender",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Defender.webp"
+      },
+      "branch": {
+        "name": "Guardian",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Guardian_Defender.webp"
+      }
+    }
+  },
+  {
+    "id": "Ch'en-Alter",
+    "skill_1": {
+      "titleSkill": "High-Pressure Splash",
+      "descSkill": "ATK +30%, each attack restores HP to this unit equal to 25% of the damage dealt",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Ch'en/64px-Skill-Holungday1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "\"Night of Violet\"",
+      "descSkill": "Attack Range expands, ATK +80%, DEF +30%; When attacking unblocked enemies, pulls them towards this unit moderately",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Ch'en/64px-Skill-Holungday2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "\"Holiday Storm\"",
+      "descSkill": "ATK +70%, ASPD +40, Block +2; While this skill is active, this unit only takes 50% of incoming damage, with the remaining amount dealt as HP loss over 20 seconds after this skill ends",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Ch'en/64px-Skill-Holungday3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Sniper",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Sniper.webp"
+      },
+      "branch": {
+        "name": "Spreadshooter",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Spreadshooter_Sniper.webp"
+      }
+    }
+  },
+  {
+    "id": "Hoshiguma",
+    "skill_1": {
+      "titleSkill": "Unwholesome Karma",
+      "descSkill": "ATK +25% and DEF +25%. When attacked, deals 70% of ATK as Arts damage to the attacker.<br>Unlimited duration",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Hoshiguma/64px-Skill-TheBreacher1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Beginningless Ignorance",
+      "descSkill": "Attack Range expands, ATK +80%, DEF +30%; When attacking unblocked enemies, pulls them towards this unit moderately",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Hoshiguma/64px-Skill-TheBreacher2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Hellscape Tableaux",
+      "descSkill": "ATK +70%, ASPD +40, Block +2; While this skill is active, this unit only takes 50% of incoming damage, with the remaining amount dealt as HP loss over 20 seconds after this skill ends",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Hoshiguma/64px-Skill-TheBreacher3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Defender",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Defender.webp"
+      },
+      "branch": {
+        "name": "Protector",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Protector_Defender.webp"
+      }
+    }
+  },
+  {
+    "id": "Lin",
+    "skill_1": {
+      "titleSkill": "Elegance",
+      "descSkill": "Can switch between the original state and the following state:<br>Attack interval slightly increased, ATK +10%, attacks slow the target for 0.7 seconds",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Lin/64px-Skill-Lin1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Shelter",
+      "descSkill": "ASPD +10, less likely to be attacked by enemies, all allies within attack range gain Talent 1 effect while skill is active",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Lin/64px-Skill-Lin2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Riving Lighttails",
+      "descSkill": "ATK +90%, attack range and Crystal Barrier shatter damage range increase; Crystal Barrier damage threshold increases to 1.5x. Whenever an attack defeats an enemy, immediately shatter the Crystal Barrier and create a new one<br>Skill can be manually deactivated (skill can be interrupted at any time)",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Lin/64px-Skill-Lin3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Caster",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@539c1fe1c3569d1eee3fedce1141a3ecf5a5ff64/Rhodes-Island/ClassImages/Caster.webp"
+      },
+      "branch": {
+        "name": "Phalanx",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Phalanx_Caster.webp"
+      }
+    }
+  },
+  {
+    "id": "Swire",
+    "skill_1": {
+      "titleSkill": "Loyalty and Generosity",
+      "descSkill": "Spends 1 Coin; the next attack restores HP equal to 25% of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP<br>A maximum of 1 Coin may be held while this Skill is equipped",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Swire/64px-Skill-ElegantWit1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "\"Courtesy Gift\"",
+      "descSkill": "Spends 1 Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals 140% of ATK as Physical damage to the first target it comes in contact with, and Slows for 2 seconds<br>The Champagne Bomb deals damage 1 additional time after having been deployed for 3 seconds; a maximum of 3 Coins may be held while this Skill is equipped",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Swire/64px-Skill-ElegantWit2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Lavish and Prodigal",
+      "descSkill": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, all Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for 80% of ATK as Physical damage and knocks the target back slightly<br>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@1f32586ed934a13c3469ec80693d308803f9bb6d/Rhodes-Island/DataOperatorImages/OperatorSkill/Swire/64px-Skill-ElegantWit3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Guard",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Guard.png"
+      },
+      "branch": {
+        "name": "Instructor",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Instructor_Guard.webp"
+      }
+    }
+  },
+  {
+    "id": "Necrass",
+    "skill_1": {
+      "titleSkill": "Dread Desire",
+      "descSkill": "Passive Effect: Whenever a Servant of Lamentation is created or upgraded, all surrounding enemies take 250% of Necrass's ATK as Arts damage<br>Active Effect: Resummons all Servants of Lamentation immediately; if there are none on the field, summons 1",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Necrass/64px-Skill-Necrass1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Snap the Withered",
+      "descSkill": "Puts up to 2 enemies in range to Sleep, dealing 70% ATK as Arts damage to the targets every 0.5 seconds; defeating a target during the skill will summon 2 additional Servants of Lamentation",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Necrass/64px-Skill-Necrass2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Crown the Dead",
+      "descSkill": "Passive Effect: A single Servant of Lamentation takes on a special form, which can only be upgraded using this skill up to 6 times<br>Active Effect: Immediately deals 450% ATK as Arts damage to all enemies in range, then consumes a Servant of Lamentation to upgrade the special Servant and restore 20% of its Max HP (effect doubles if consumed Servant is upgraded); repeats 2 times",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Necrass/64px-Skill-Necrass3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Caster",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@539c1fe1c3569d1eee3fedce1141a3ecf5a5ff64/Rhodes-Island/ClassImages/Caster.webp"
+      },
+      "branch": {
+        "name": "Shaper",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Shaper_Caster.webp"
+      }
+    }
+  },
+  {
+    "id": "Reed",
+    "skill_1": {
+      "titleSkill": "Swift Strike γ",
+      "descSkill": "ATK +20%; ASPD +20",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Reed/64px-Skill-S3.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Wither and Thrive",
+      "descSkill": "Prioritizing ground Operators, gives 1 ally 3 fireballs with the following effect: Every 1.5 seconds, deals 130% of Reed the Flame Shadow's ATK as Arts damage to an enemy, triggering her Trait but only on that ally.",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Reed/64px-Skill-FlameShadow2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Ember of Life",
+      "descSkill": "Attacks hit 2 enemies; ATK +10%; Talent 1 activation chance increases to 100%; enemies with the Cinder effect take 10% of Reed the Flame Shadow's ATK as Arts damage per second, and when defeated deal 90% of ATK as Arts damage and inflict Cinder to nearby enemies<br>Cinder lasts until this skill expires",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Reed/64px-Skill-FlameShadow3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Medic",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Medic.webp"
+      },
+      "branch": {
+        "name": "Incantation",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Incantation_Medic.webp"
+      }
+    }
+  },
+  {
+    "id": "Degenbrecher",
+    "skill_1": {
+      "titleSkill": "Pure Force",
+      "descSkill": "The next attack deals 160% of ATK as Physical damage twice to up to 5 nearby ground enemies",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Degenbrecher/64px-Skill-Degenbrecher1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Doombringer's Euphoria",
+      "descSkill": "Slash 2 times at up to 5 ground enemies ahead, or slash 3 times when attacking blocked enemies. Talent trigger rate increased to 100%, and each slash deals 220% of ATK as Physical damage<br>Can store 2 charges",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Degenbrecher/64px-Skill-Degenbrecher2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Siren Killer",
+      "descSkill": "Slash 10 times, each dealing 150% of ATK as Physical damage to up to 5 enemies. Talent trigger chance increases to 100%, and continuously drags enemies towards self, with moderate force. Then deal 300% of ATK as Physical damage once, and drag enemies towards self with significant force",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Degenbrecher/64px-Skill-Degenbrecher3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Guard",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Guard.png"
+      },
+      "branch": {
+        "name": "Swordmaster",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Swordmaster_Guard.webp"
+      }
+    }
+  },
+  {
+    "id": "Irene",
+    "skill_1": {
+      "titleSkill": "Gust",
+      "descSkill": "The next attack deals 100% ATK as Physical damage, and causes the target to Levitate for 1 seconds, then deals 100% ATK as Physical damage to it again",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Irene/64px-Skill-Irene1.webp"
+    },
+    "skill_2": {
+      "titleSkill": "Shattertide",
+      "descSkill": "Deals 280% ATK as Physical damage to up to 4 ground enemies in front, and cause targets with 3 or less Weight to Levitate for 1 seconds<br>Can store 2 charges",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Irene/64px-Skill-Irene2.webp"
+    },
+    "skill_3": {
+      "titleSkill": "Judgment",
+      "descSkill": "Deals 200% ATK as Physical damage to all nearby ground enemies, and cause them to Levitate for 2 seconds, then bombard 8 times, each hit dealing 180% ATK as Physical damage to all enemies in a small area around a random target",
+      "imageSkill": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c1c47668bd56270689018223f7f2e0105455404e/Rhodes-Island/DataOperatorImages/OperatorSkill/Irene/64px-Skill-Irene3.webp"
+    },
+    "operatorRole": {
+      "class": {
+        "name": "Guard",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/ClassImages/Guard.png"
+      },
+      "branch": {
+        "name": "Swordmaster",
+        "image": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@d80350820bb872c61a4fdfa2e0908ba59d22936c/Rhodes-Island/BranchImages/Swordmaster_Guard.webp"
+      }
+    }
+  }
+]

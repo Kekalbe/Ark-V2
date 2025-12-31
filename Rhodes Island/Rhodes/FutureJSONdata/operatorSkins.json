@@ -1,0 +1,140 @@
+[
+  {
+    "id": "Mudrock",
+    "totalSkins": [
+      {
+        "name": "Silent Night DN06",
+        "onSliderUrl": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a18ee0b81ab9bc094aac4d875394da4c735e934e/Rhodes-Island/DataOperatorImages/OutfitOperator/Mudrock_Skins/Silent_Night_DN06.webp",
+        "principalURL": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a18ee0b81ab9bc094aac4d875394da4c735e934e/Rhodes-Island/DataOperatorImages/OutfitOperator/Mudrock_Skins/Silent_Night_DN06.webp",
+        "price": 18,
+        "onSliderIMGTransform": "translate(-55%, -40%)",
+        "onSliderWidth" : "clamp(95vh, 70vw, 80vw)",
+        "nameTransform": "translate(7vw, 95%)",
+        "nameSize": "clamp(6vh, 3.5vw, 5vw)",
+        "responsiveTransform": {
+          "principalTransform": "translate(-45%, -45%)",
+          "mobilePrincipalTransform": "translate(-53%, -48%)"
+        },
+        "responsiveWidth": {
+          "widthImgPrincipal": "clamp(160vh, 90vw, 120vw)",
+          "mobileWidthImgPrincipal": "160vh"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Hoshiguma",
+    "totalSkins": [
+      {
+        "name": "Seeker SK97",
+        "onSliderUrl": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c8fec22256351410f45d1173c54fa3edc3f05009/Rhodes-Island/DataOperatorImages/OutfitOperator/Hoshiguma_Skins/Seeker_SK97.webp",
+        "principalURL": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c8fec22256351410f45d1173c54fa3edc3f05009/Rhodes-Island/DataOperatorImages/OutfitOperator/Hoshiguma_Skins/Seeker_SK97.webp",
+        "price": 21,
+        "onSliderIMGTransform": "translate(-55%, -48%)",
+        "onSliderWidth" : "clamp(85vh, 60vw, 75vw)",
+        "nameTransform": "translate(15vw, 80%)",
+        "nameSize": "clamp(7vh, 4.5vw, 7vw)",
+        "responsiveTransform": {
+          "principalTransform": "translate(-50%, -55%)",
+          "mobilePrincipalTransform": "translate(-53%, -57%)"
+        },
+        "responsiveWidth": {
+          "widthImgPrincipal": "clamp(160vh, 90vw, 120vw)",
+          "mobileWidthImgPrincipal": "140vh"
+        }
+      }
+    ]
+  },
+    {
+    "id": "Ch'en",
+    "totalSkins": [
+      {
+        "name": "Holiday HD79",
+        "onSliderUrl": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c806c4b23057a76266da0ff0a3f55180fd0d4cd8/Rhodes-Island/DataOperatorImages/OutfitOperator/Ch'enTheHolungday_Skins/Holiday_HD79.webp",
+        "principalURL": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c806c4b23057a76266da0ff0a3f55180fd0d4cd8/Rhodes-Island/DataOperatorImages/OutfitOperator/Ch'enTheHolungday_Skins/Holiday_HD79.webp",
+        "price": 21,
+        "onSliderIMGTransform": "translate(-52%, -40%)",
+        "onSliderWidth" : "clamp(95vh, 70vw, 80vw)",
+        "nameTransform": "translate(-12vw, -160%)",
+        "nameSize": "clamp(6vh, 3.5vw, 5vw)",
+        "responsiveTransform": {
+          "principalTransform": "translate(-40%, -50%)",
+          "mobilePrincipalTransform": "translate(-50%, -50%)"
+        },
+        "responsiveWidth": {
+          "widthImgPrincipal": "clamp(160vh, 100vw, 120vw)",
+          "mobileWidthImgPrincipal": "155vh"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Nearl",
+    "totalSkins": [
+      {
+        "name": "Shimmering Dew SD01",
+        "onSliderUrl": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/OutfitOperator/Nearl_Skins/Shimmering_Dew_SD01.webp",
+        "principalURL": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/OutfitOperator/Nearl_Skins/Shimmering_Dew_SD01.webp",
+        "price": 21,
+        "onSliderIMGTransform": "translate(-50%, -45%)",
+        "onSliderWidth" : "clamp(95vh, 65vw, 80vw)",
+        "nameTransform": "translate(-12vw, 130%)",
+        "nameSize": "clamp(1vw + 0.5vh, 2vw + 3vh, 8vw)",
+        "responsiveTransform": {
+          "principalTransform": "translate(-41%, -47%)",
+          "mobilePrincipalTransform": "translate(-50%, -53%)"
+        },
+        "responsiveWidth": {
+          "widthImgPrincipal": "clamp(160vh, 100vw, 120vw)",
+          "mobileWidthImgPrincipal": "145vh"
+        }
+      }
+    ]
+  },
+  {
+        "id": "Siderocca",
+    "totalSkins": [
+      {
+        "name": "Light Breeze LB03",
+        "onSliderUrl": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@96f272f61af861a307e3b0fb94ca5598db49eee7/Rhodes-Island/DataOperatorImages/OutfitOperator/Siderocca_Skins/Light_Breeze_LB03.webp",
+        "principalURL": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/OutfitOperator/Siderocca_Skins/Light_Breeze_LB03.webp",
+        "price": 18,
+        "onSliderIMGTransform": "translate(-48%, -39%)",
+        "onSliderWidth" : "clamp(95vh, 65vw, 80vw)",
+        "nameTransform": "translate(7vw, 95%)",
+        "nameSize": "clamp(6vh, 3.5vw, 5vw)",
+        "responsiveTransform": {
+          "principalTransform": "translate(-50%, -45%)",
+          "mobilePrincipalTransform": "translate(-50%, -53%)"
+        },
+        "responsiveWidth": {
+          "widthImgPrincipal": "clamp(160vh, 100vw, 120vw)",
+          "mobileWidthImgPrincipal": "120vh"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Typhon",
+    "totalSkins": [
+      {
+        "name": "Temperature Difference RT.RX07",
+        "onSliderUrl": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/OutfitOperator/Typhon_Skins/Temperature_Difference_RT_RX07.webp",
+        "principalURL": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/OutfitOperator/Typhon_Skins/Temperature_Difference_RT_RX07.webp",
+        "price": 21,
+        "onSliderIMGTransform": "translate(-40%, -45%)",
+        "onSliderWidth" : "clamp(95vh, 65vw, 80vw)",
+        "nameTransform": "translate(-17vw, 60%)",
+        "nameSize": "clamp(5vh, 3.5vw, 6vw)",
+        "responsiveTransform": {
+          "principalTransform": "translate(-35%, -50%)",
+          "mobilePrincipalTransform": "translate(-38%, -53%)"
+        },
+        "responsiveWidth": {
+          "widthImgPrincipal": "clamp(160vh, 100vw, 120vw)",
+          "mobileWidthImgPrincipal": "150vh"
+        }
+      }
+    ]
+  }
+]

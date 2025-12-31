@@ -1,0 +1,278 @@
+[
+  {
+    "id": "Ling",
+    "name": "Ling",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@89ad27e06cffd91cbdcc5385e15b134a87ff4f13/Rhodes-Island/DataOperatorImages/SelectorOperator/Ling/Ling.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@5a098e610d80545d516d2b3dae12d036b1343b4a/DataOperatorImages/SelectorOperator/Ling/Ling_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-40%, -40%)",
+      "width": "clamp(180vh, 100vw, 110vw)",
+      "bgWidth": "clamp(280vh, 160vw, 170vw)",
+      "bgTransform": "translate(-55%, -50%)",
+      "movedForm": "translate(-60%, -40%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-50%, -35%)",
+      "width": "clamp(140vh + 15vw, 150vh + 15vw, 300vw)",
+      "bgWidth": "clamp(300vh + 10vw, 300vh + 20vw, 300vh + 40vw)",
+      "bgTransform": "translate(-45%, -50%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(100vh, 50vw, 60vw)",
+      "transformInBox": "translate(-52%, -32%)"
+    }
+  },
+  {
+    "id": "Nian",
+    "name": "Nian",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@96f272f61af861a307e3b0fb94ca5598db49eee7/Rhodes-Island/DataOperatorImages/SelectorOperator/Nian/Nian.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@cf398d2c56cc57cb99af87f04f3a66df5261ae15/Rhodes-Island/DataOperatorImages/SelectorOperator/Nian/Nian_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-35%, -38%)",
+      "width": "clamp(160vh, 90vw, 100vw)",
+      "bgWidth": "clamp(290vh, 180vw, 190vw)",
+      "bgTransform": "translate(-60%, -45%)",
+      "movedForm": "translate(-60%, -38%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-45%, -35%)",
+      "width": "clamp(130vh + 15vw, 130vh + 15vw, 130vh + 40vw)",
+      "bgWidth": "clamp(280vh + 10vw, 280vh + 20vw, 280vh + 40vw)",
+      "bgTransform": "translate(-53%, -48%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(100vh, 50vw, 60vw)",
+      "transformInBox": "translate(-48%, -28%)"
+    }
+  },
+  {
+    "id": "Dusk",
+    "name": "Dusk",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@f221f7c7d696a978b42a1abf08ff727dfb8d3f59/Rhodes-Island/DataOperatorImages/SelectorOperator/Dusk/Dusk.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@cf398d2c56cc57cb99af87f04f3a66df5261ae15/Rhodes-Island/DataOperatorImages/SelectorOperator/Dusk/Dusk_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-35%, -35%)",
+      "width": "clamp(160vh, 85vw, 90vw)",
+      "bgWidth": "clamp(260vh, 160vw, 180vw)",
+      "bgTransform": "translate(-60%, -45%)",
+      "movedForm": "translate(-65%, -35%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-45%, -35%)",
+      "width": "clamp(140vh + 9vw, 140vh + 12vw, 140vh + 20vw)",
+      "bgWidth": "clamp(300vh + 10vw, 300vh + 20vw, 300vh + 40vw)",
+      "bgTransform": "translate(-55%, -45%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(80vh, 40vw, 50vw)",
+      "transformInBox": "translate(-50%, -25%)"
+    }
+  },
+  {
+    "id": "Shu",
+    "name": "Shu",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@cf398d2c56cc57cb99af87f04f3a66df5261ae15/Rhodes-Island/DataOperatorImages/SelectorOperator/Shu/Shu.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@cf398d2c56cc57cb99af87f04f3a66df5261ae15/Rhodes-Island/DataOperatorImages/SelectorOperator/Shu/Shu_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-27%, -30%)",
+      "width": "clamp(120vh, 70vw, 80vw)",
+      "bgWidth": "clamp(240vh, 140vw, 150vw)",
+      "bgTransform": "translate(-50%, -50%)",
+      "movedForm": "translate(-70%, -30%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-55%, -30%)",
+      "width": "clamp(100vh + 9vw, 100vh + 12vw, 100vh + 20vw)",
+      "bgWidth": "clamp(200vh + 10vw, 200vh + 20vw, 200vh + 40vw)",
+      "bgTransform": "translate(-42%, -52%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(90vh, 45vw, 50vw)",
+      "transformInBox": "translate(-50%, -20%)"
+    }
+  },
+  {
+    "id": "Ch'en-Alter",
+    "name": "Ch'en",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/Ch'enTheHolungday/Ch'en_the_Holungday.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/Ch'enTheHolungday/Ch'en_the_Holungday_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-35%, -36%)",
+      "width": "clamp(160vh, 95vw, 105vw)",
+      "bgWidth": "clamp(240vh, 140vw, 150vw)",
+      "bgTransform": "translate(-60%, -51%)",
+      "movedForm": "translate(-65%, -36%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-50%, -35%)",
+      "width": "clamp(150vh + 9vw, 150vh + 12vw, 150vh + 20vw)",
+      "bgWidth": "clamp(240vh + 10vw, 240vh + 20vw, 240vh + 40vw)",
+      "bgTransform": "translate(-50%, -52%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(100vh, 50vw, 55vw)",
+      "transformInBox": "translate(-55%, -27%)"
+    }
+  },
+  {
+    "id": "Hoshiguma",
+    "name": "Hoshiguma",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/HoshigumaTheBreacher/Hoshiguma_the_Breacher.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c0148c95aad60ddce4bf4958e4f27f9df5a88f44/Rhodes-Island/DataOperatorImages/SelectorOperator/HoshigumaTheBreacher/Hoshiguma_the_Breacher_Elite_2%20(1).webp",
+    "desktopValue": {
+      "transform": "translate(-50%, -30%)",
+      "width": "clamp(120vh, 70vw, 120vw)",
+      "bgWidth": "clamp(250vh + 30vw, 250vh + 40vw, 250vh + 50vw)",
+      "bgTransform": "translate(-60%, -45%)",
+      "movedForm": "translate(-75%, -30%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-55%, -27%)",
+      "width": "clamp(100vh + 9vw, 100vh + 12vw, 120vh)",
+      "bgWidth": "clamp(200vh + 30vw, 200vh + 40vw, 200vh + 60vw)",
+      "bgTransform": "translate(-55%, -50%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(80vh, 40vw, 45vw)",
+      "transformInBox": "translate(-57%, -20%)"
+    }
+  },
+  {
+    "id": "Lin",
+    "name": "Lin",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/Lin/Lin.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/Lin/Lin_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-25%, -33%)",
+      "width": "clamp(150vh, 85vw, 95vw)",
+      "bgWidth": "clamp(240vh, 150vw, 160vw)",
+      "bgTransform": "translate(-63%, -48%)",
+      "movedForm": "translate(-45%, -33%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-40%, -30%)",
+      "width": "clamp(125vh + 9vw, 125vh + 12vw, 125vh + 20vw)",
+      "bgWidth": "clamp(240vh + 10vw, 240vh + 20vw, 240vh + 40vw)",
+      "bgTransform": "translate(-50%, -50%) rotate(-15deg)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(90vh, 45vw, 50vw)",
+      "transformInBox": "translate(-42%, -20%)"
+    }
+  },
+  {
+    "id": "Swire",
+    "name": "Swire",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/SwireTheElegantWit/Swire_the_Elegant_Wit.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/SwireTheElegantWit/Swire_the_Elegant_Wit_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-15%, -30%)",
+      "width": "clamp(110vh, 65vw, 75vw)",
+      "bgWidth": "clamp(240vh, 130vw, 140vw)",
+      "bgTransform": "translate(-70%, -52%)",
+      "movedForm": "translate(-60%, -30%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-35%, -30%)",
+      "width": "clamp(80vh + 9vw, 80vh + 12vw, 80vh + 20vw)",
+      "bgWidth": "clamp(200vh + 10vw, 200vh + 20vw, 200vh + 40vw)",
+      "bgTransform": "translate(-60%, -55%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(53vh, 27vw, 34vw)",
+      "transformInBox": "translate(-43%, -25%)"
+    }
+  },
+  {
+    "id": "Necrass",
+    "name": "Necrass",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/Necrass/Necrass.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/Necrass/Necrass_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-35%, -41%)",
+      "width": "clamp(150vh, 90vw, 100vw)",
+      "bgWidth": "clamp(240vh, 130vw, 140vw)",
+      "bgTransform": "translate(-60%, -54%)",
+      "movedForm": "translate(-68%, -41%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-50%, -38%)",
+      "width": "clamp(80vh + 75vw, 80vh + 80vw, 80vh + 90vw)",
+      "bgWidth": "clamp(200vh + 10vw, 200vh + 20vw, 200vh + 40vw)",
+      "bgTransform": "translate(-50%, -58%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(70vh, 35vw, 40vw)",
+      "transformInBox": "translate(-57%, -40%)"
+    }
+  },
+  {
+    "id": "Reed",
+    "name": "Reed",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/ReedFlameShadow/Reed_the_Flame_Shadow.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/ReedFlameShadow/Reed_the_Flame_Shadow_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-35%, -45%)",
+      "width": "clamp(150vh, 85vw, 95vw)",
+      "bgWidth": "clamp(255vh, 135vw, 145vw)",
+      "bgTransform": "translate(-55%, -55%)",
+      "movedForm": "translate(-55%, -45%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-45%, -42%)",
+      "width": "clamp(80vh + 75vw, 80vh + 80vw, 80vh + 90vw)",
+      "bgWidth": "clamp(280vh + 40vw, 280vh + 50vw, 280vh + 60vw)",
+      "bgTransform": "translate(-45%, -55%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(75vh, 40vw, 45vw)",
+      "transformInBox": "translate(-45%, -40%)"
+    }
+  },
+  {
+    "id": "Degenbrecher",
+    "name": "Degenbrecher",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/Degenbrecher/Degenbrecher.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/Degenbrecher/Degenbrecher_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-15%, -30%)",
+      "width": "clamp(90vh, 55vw, 65vw)",
+      "bgWidth": "clamp(235vh, 135vw, 145vw)",
+      "bgTransform": "translate(-54%, -52%)",
+      "movedForm": "translate(-55%, -30%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-55%, -27%)",
+      "width": "clamp(60vh + 15vw, 60vh + 20vw, 60vh + 30vw)",
+      "bgWidth": "clamp(200vh + 10vw, 200vh + 20vw, 200vh + 40vw)",
+      "bgTransform": "translate(-45%, -55%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(40vh, 20vw, 25vw)",
+      "transformInBox": "translate(-53%, -25%)"
+    }
+  },
+  {
+    "id": "Irene",
+    "name": "Irene",
+    "characterImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/Irene/Irene.webp",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@772fe91140ef63fd41564ad4e5525adb96402726/Rhodes-Island/DataOperatorImages/SelectorOperator/Irene/Irene_Elite_2.webp",
+    "desktopValue": {
+      "transform": "translate(-35%, -41%)",
+      "width": "clamp(135vh, 75vw, 85vw)",
+      "bgWidth": "clamp(235vh, 125vw, 135vw)",
+      "bgTransform": "translate(-60%, -47%)",
+      "movedForm": "translate(-65%, -41%)"
+    },
+    "mobileValue": {
+      "transform": "translate(-50%, -38%)",
+      "width": "clamp(60vh + 50vw, 60vh + 60vw, 60vh + 70vw)",
+      "bgWidth": "clamp(200vh + 10vw, 200vh + 20vw, 200vh + 40vw)",
+      "bgTransform": "translate(-50%, -47%)"
+    },
+    "inBoxConfigs": {
+      "widthInBox": "clamp(75vh, 40vw, 45vw)",
+      "transformInBox": "translate(-54%, -30%)"
+    }
+  }
+]

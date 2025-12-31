@@ -1,0 +1,32 @@
+# Habilitar Gzip
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml application/xml application/xhtml+xml application/javascript application/x-javascript text/css application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/json
+  AddOutputFilterByType DEFLATE font/woff font/woff2 application/font-woff2 application/font-woff
+  SetEnvIf Request_URI \.pdf$ no-gzip
+  SetEnvIf Request_URI \.jpg$ no-gzip
+  SetEnvIf Request_URI \.jpeg$ no-gzip
+  SetEnvIf Request_URI \.gif$ no-gzip
+  SetEnvIf Request_URI \.png$ no-gzip
+</IfModule>
+
+# Definir Cache-Control para Recursos Estáticos (Imagens, CSS, JS)
+<FilesMatch "\.(jpg|jpeg|png|gif|css|js|woff|woff2|eot|ttf|otf)$">
+  Header set Cache-Control "public, max-age=2592000, immutable"
+  Header unset ETag
+  FileETag None
+</FilesMatch>
+
+# Para arquivos HTML ou conteúdo dinâmico (não armazenar em cache)
+<FilesMatch "\.(html|php)$">
+  Header set Cache-Control "no-cache
+  Header set Expires "Thu, 01 Jan 1970 00:00:00 GMT"
+</FilesMatch>
+
+# Forçar cache busting através de query string ou hash (exemplo)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} \.(js|css|png|jpg|jpeg|gif|woff2|woff|eot|ttf|otf)$
+  RewriteCond %{QUERY_STRING} !.*(v|version|hash)=
+  RewriteRule ^(.*)$ $1?v=1 [L]
+</IfModule>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skins temáticas de personagens como Blaze, Irene e Mudrock no universo de Arknights.">
+    <meta name="keywords" content="Arknights, skins, personagens, animação, jogo, design, Blaze, Irene, Mudrock">
+    <title>Explosive Blue Flame</title>
+
+    <style>
+/* Tela de carregamento */
+
+.entrance img { aspect-ratio: 1 / 1; object-fit: contain; width: clamp(15vw + 12vh, 15vw + 15vh, 15vw + 30vh); height: auto; }
+        
+.entrance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* cobre toda a tela */
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background: linear-gradient(180deg, #010101, #303030);
+    z-index: 10000;       /* acima de todo o conteúdo */
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    pointer-events: all;  /* captura todos os eventos */
+    touch-action: none;   /* bloqueia arrasto e gestos */
+}
+
+.entrance.hidden { opacity: 0; pointer-events: none; } /* Tela de carregamento ocultada */        
+        
+body {
+  margin: 0; padding: 0;
+  overflow: hidden; overflow-y: scroll;
+  font-family: 'BebasNeue', sans-serif;
+  user-select: none;
+  color-scheme: light dark;
+}
+        
+h1 { font-size: 1.5rem; }
+        
+.outside {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 100%; height: 50vw !important;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#home { display: block; position: relative; width: 100%; }
+#skinView #selector { display: none; }
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('Rhodes-Island/Fonts/BebasNeue-Regular.woff2') format('truetype');
+    font-display: swap;
+    font-weight: normal; font-style: normal;
+}
+ 
+.menu { display: flex; width: 100vw; min-width: 35vh; height: 15vh; min-height: 5vh; position: relative; align-self: flex-start; }
+.menu img { position: absolute; aspect-ratio: 1 / 1; object-fit: contain; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; width: clamp(15vw + 5vh, 15vw + 10vh, 50vw); min-width: 15vh; height: 55%; }
+        
+.menu-title, .menu-section { display: none; }        
+        
+.background {
+    background-image: url(/Rhodes-Island/DefaultImgs/Episode14AbsolvedWillBeTheSeekers.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80%;
+    position: absolute;
+    width: 100%; height: 100%;
+    transition: opacity 0.5s ease-in;
+    z-index: -1;
+}        
+        
+</style>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" as="image" type="image/webp" crossorigin="anonymous">
+<link rel="preload" as="style" href="Rhodes-Island/CSS/Home/homepage.css">
+<link rel="preload" href="Rhodes-Island/Fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="style" href="Rhodes-Island/CSS/Selector/seletor.css">
+<link rel="preload" as="style" href="Rhodes-Island/CSS/SkinView/viewskins.css">
+
+</head>
+
+<body>
+
+<picture class = "entrance"><img src = "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@f2f670e2658449d4329fc4178e32382b67695452/Rhodes-Island/Imgs/initial_logo.webp" fetchpriority="high" alt = "Entrance Logo" width="200" height="200" crossorigin="anonymous"></picture>
+
+<svg style="display: flex; position: absolute; transform: translateX(-1000%);" aria-hidden="true">
+  <defs>
+    <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E7DBFF" />
+      <stop offset="100%" stop-color="#7300FF" />
+    </linearGradient>
+    <mask id="cutoutMask">
+      <rect x="0" y="0" width="100%" height="100%" fill="white" />
+      <rect x="15" y="18" width="70" height="14" rx="4" ry="4" fill="black" />
+    </mask>
+
+    <!-- Retângulo base que será usado via <use> -->
+    <rect id="cardRect" x="0" y="0" width="100" height="50" fill="url(#myGradient)" mask="url(#cutoutMask)" stroke="none" />
+  </defs>
+</svg>
+
+<div class = container-geral>
+
+<article class = "outside" id = "home">
+    <div class = "background" role="img" aria-label= "Imagem de Fundo da Home"></div>
+    <header class = "menu" width="100vw" height="15vh">
+    <div class = "nav">
+        <h2 class = "menu-title">PRTS</h2>
+        <div class = "menu-icon"></div>
+    </div>
+    <picture>
+        <img src = "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@8c2b1539038edda801565dab78afc6afae500064/Rhodes-Island/Imgs/Arknights_logo.webp" alt= "Second Logo" fetchpriority="high">
+     </picture>
+</header>
+    <section class = "menu-section">
+        <img src = "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@8c2b1539038edda801565dab78afc6afae500064/Rhodes-Island/Imgs/Arknights_logo.webp" alt="Second Logo" fetchpriority="low" width="300" height="300">
+        <p>Home</p>
+        <p>Notices</p>
+        <p>+Skins</p>
+        <p>+Characters</p>
+    </section> 
+    </article>
+    
+<article class = "outside" id = "selector">
+    <h2 class = "Operator-title">Hoshiguma</h2>
+    <img src = "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c0148c95aad60ddce4bf4958e4f27f9df5a88f44/Rhodes-Island/DataOperatorImages/SelectorOperator/HoshigumaTheBreacher/Hoshiguma_the_Breacher_Elite_2%20(1).webp" class = "BG-Operator-Image" alt="Background Image of Actual Operator" loading = "lazy" width="1200" heigh="800" crossorigin="anonymous">
+<img 
+  src="https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@e80a0bd7b8e8857eac18d47c003bebdacec73dd7/Rhodes-Island/DataOperatorImages/SelectorOperator/HoshigumaTheBreacher/Hoshiguma_the_Breacher.webp" class="Operator-Image" alt="Principal Image of Actual Operator" loading="lazy" width="800" height="800" crossorigin="anonymous">
+    <div class="wrapper-conteiner">
+    <div class = "layout-container">
+      <button class = "exit-button" tabindex="-1"><p>Exit</p></button>
+    </div>
+    <div class="outer-block">
+      <div class="operator-conteiner">
+        <div class="card">
+          <svg class="card__overlay" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true">
+            <use href="#cardRect" />
+          </svg>
+        </div>
+        <div class="operator-selector-image">
+          <img src="https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@a7fac8bede4da5f4712ca23ee310e8c91574705e/Rhodes-Island/DataOperatorImages/SelectorOperator/HoshigumaTheBreacher/Hoshiguma_the_Breacher.webp" alt="Operator Image Selector" id="Hoshiguma" loading="lazy" crossorigin="anonymous">
+        </div>
+            <p class="operator-selector-name" id="codename_Hoshiguma">Hoshiguma</p>
+      </div>
+    </div>
+  </div>
+    <section class = "char-overall">
+<div class="character-selector">
+    <button class="skills-button" id= "skills-btn" aria-label="Selecione Skills" tabindex="-1">
+        <img src="Rhodes-Island/DefaultImgs/Skills ( Reed The FlameShadow).webp" loading = "lazy" alt="Imagem representando Skills" width="300" height="300">
+        <h3>Skills</h3>
+    </button>
+    <button class="characters-button" id= "characters-btn"  aria-label="Selecione Characters" tabindex="-1">
+        <img src="Rhodes-Island/DefaultImgs/Characters ( Eunectes ).webp" loading= "lazy" alt="Imagem representando Characters" width="300" height="300">
+        <h3>Operators</h3>
+    </button>
+</div>
+        <section class = "character-information">
+            <div class = "wrapper-container">
+            <div class = "character-skills" tabindex="-1">
+                <div>
+            <figure>
+                <img src = "Rhodes-Island/DefaultImgs/HoshigumaSkill1.webp" loading = "lazy" alt = "Skill-01" width="100%" height="100%">
+            </figure>
+            <figcaption style = "padding-top: 3%;">
+                <h3>Unwholesome Karma</h3>
+                <p>ATK +25% and DEF +25%. When attacked, deals 70% of ATK as Arts damage to the attacker.
+                Unlimited duration</p>
+            </figcaption>
+                </div>
+                <div>
+            <figure>
+                <img src = "Rhodes-Island/DefaultImgs/HoshigumaSkill2.webp" loading = "lazy" alt = "Skill-02" width="100%" height="100%">
+            </figure>
+            <figcaption style = "padding-top: 3%;">
+                <h3>Beginningless Ignorance</h3>
+                <p>Attack Range expands, ATK +80%, DEF +30%; When attacking unblocked enemies, pulls them towards this unit moderately</p>
+            </figcaption>
+                </div>
+                <div>
+            <figure>
+                <img src = "Rhodes-Island/DefaultImgs/HoshigumaSkill3.webp" loading = "lazy" alt = "Skill-03" width="100%" height="100%">
+            </figure>
+            <figcaption style = "padding-top: 3%;">
+                <h3>Hellscape Tableaux</h3>
+                <p>ATK +70%, ASPD +40, Block +2; While this skill is active, this unit only takes 50% of incoming damage, with the remaining amount dealt as HP loss over 20 seconds after this skill ends</p>
+            </figcaption>
+                </div>
+            </div>
+            </div>
+
+            <div class = "character-branchs">
+                <img src = "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@f2f670e2658449d4329fc4178e32382b67695452/Rhodes-Island/ClassImages/Caster.webp" alt="Actual Operator Class" class = "operator-class-img" loading="lazy" width="68" height="65">
+                <img src = "https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@f2f670e2658449d4329fc4178e32382b67695452/Rhodes-Island/BranchImages/Shaper_Caster.webp" alt="Actual Operator Branch" class = "operator-branch-img" loading="lazy" width="57" height="57">
+                <p class = 'operator-branch'>Shaper</p>
+                <p class = 'operator-class'>Caster</p>
+            </div>
+
+            <button class = "skill-exit-button" tabindex="-1"><p>Exit</p></button>
+        </section>
+    </section>
+    </article>
+
+<article class = "outside" id = "skinView">
+<div class = "outsideContainer">
+        <img 
+  src="https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c806c4b23057a76266da0ff0a3f55180fd0d4cd8/Rhodes-Island/DataOperatorImages/OutfitOperator/Ch'enTheHolungday_Skins/Holiday_HD79.webp" 
+  class="operatorSkinIMG" 
+  id="principalImg-Operator"
+  loading="lazy"
+  alt="Actual Operator Skin Image"
+  crossorigin="anonymous"
+/>
+        
+        <section class = "skinsSlider">
+<div class="skinsTrack">
+  <div class="SkinsOperator" id="Taihou">
+    <div class="layerConteiner">
+      <div class="layoutConteinerSkin">
+        <img src="https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@c0741e1b06954fa656413c726d904ff500811a55/Rhodes-Island/DataOperatorImages/OutfitOperator/Ch'enTheHolungday_Skins/Holiday_HD79.webp" class="operatorSliderSkinIMG" alt="One skin of many other operators skins" crossorigin="anonymous" loading="lazy">
+        <h2 class="OperatorName">Ch'en</h2>
+      </div>
+    </div>
+    <div class="operatorSliderSkin-Name">
+      <div class="text-track">
+        <h3>// Holiday HD79</h3>
+        <h3>// Holiday HD79</h3>
+        <h3>// Holiday HD79</h3>
+      </div>
+    </div>
+    <div class="skinPrice">
+      <img src="https://cdn.jsdelivr.net/gh/Kekalbe/Ark-V2@9d51157d01289390b6f23870524a461498d6b799/Rhodes-Island/Imgs/22px-Originite_Prime_icon.webp" alt="Actual Operator Skin Price" loading= "lazy">
+      <span id="priceCh'enSummer">21</span>
+    </div>
+
+</div>
+        </section>
+        <button class = "moreSkins"><h2>// More Skins>>></h2></button>
+        <section class="operatorsSkins">
+            <h2>// Operators Skins</h2>
+        </section>
+    <div class= "OperatorSkin-Name">
+            <h2 class="actualOperator-name" style= "margin: 0; width: 100%;">
+                Ch'en<br>
+                <span class="actualSkin-name">Holiday HD79</span>
+            </h2>
+    </div>    
+  </div>
+   </article>
+</div>
+<script type= "text/javascript" src="Rhodes-Island/JS/HomeJs/home.js" defer></script>
+<script type = "text/javascript" src = "Rhodes-Island/JS/SelectorJs/selectorskin.js" defer></script>
+<script type = "text/javascript" src = "Rhodes-Island/JS/SkinViewJs/skinsOverview.js" defer></script>
+<script>
+// Bloqueia scroll inicial
+document.body.style.overflow = 'hidden';
+window.scrollTo(0, 0);
+
+// Ao carregar a página
+window.addEventListener('load', () => {
+    const entrance = document.querySelector('.entrance');
+
+    function hideEntrance() {
+        // Garante que o scroll está no topo
+        window.scrollTo(0, 0);
+
+        // Inicia a transição de opacidade
+        entrance.classList.add('hidden');
+
+        // Remove a tela e libera scroll após a transição
+        setTimeout(() => { entrance.style.display = 'none'; document.body.style.overflowY = 'auto';
+        }, 500); // tempo da transição
+    }
+    // Simula tempo de carregamento visual (500ms)
+    setTimeout(() => { hideEntrance(); }, 500);
+});
+
+</script>
+<link rel="stylesheet" href="Rhodes-Island/CSS/Home/homepage.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="Rhodes-Island/CSS/Selector/seletor.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="Rhodes-Island/CSS/SkinView/viewskins.css" media="print" onload="this.media='all'">
+</body>
+</html>
